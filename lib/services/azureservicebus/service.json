@@ -16,8 +16,7 @@
   "plans": [{
     "id": "6be0d8b5-381f-4d68-bdfd-a131425d3835",
     "name": "default",
+    "free": false,
     "description": "Your cost depends on your operations. See details: https://azure.microsoft.com/en-us/pricing/details/service-bus/"
   }]
 }
-
-
