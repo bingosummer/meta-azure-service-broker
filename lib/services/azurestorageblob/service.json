@@ -1,6 +1,6 @@
 {
   "id": "2e2fc314-37b6-4587-8127-8f9ee8b33fea",
-  "name": "azurestorageblob",
+  "name": "azure-storageblob",
   "description": "Azure Storage Blob Service",
   "bindable": true,
   "tags": [
