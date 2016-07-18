@@ -55,7 +55,7 @@ bindingId = uuid.v4();
 resourceGroupName = 'cloud-foundry-' + instanceId;
 var namespaceName = 'cf' + instanceId;
 var azureservicebus = {
-  serviceName: 'azureservicebus',
+  serviceName: 'azure-servicebus',
   serviceId: '6dc44338-2f13-4bc5-9247-5b1b3c5462d3',
   planId: '6be0d8b5-381f-4d68-bdfd-a131425d3835',
   instanceId: instanceId,
@@ -79,7 +79,7 @@ testMatrix.push(azureservicebus);
 instanceId = uuid.v4();
 bindingId = uuid.v4();
 var azureservicebusWithoutParameters = {
-  serviceName: 'azureservicebus',
+  serviceName: 'azure-servicebus',
   serviceId: '6dc44338-2f13-4bc5-9247-5b1b3c5462d3',
   planId: '6be0d8b5-381f-4d68-bdfd-a131425d3835',
   instanceId: instanceId,

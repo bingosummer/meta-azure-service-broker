@@ -1,6 +1,6 @@
 {
   "id": "6dc44338-2f13-4bc5-9247-5b1b3c5462d3",
-  "name": "azureservicebus",
+  "name": "azure-servicebus",
   "description": "Azure Service Bus Service",
   "bindable": true,
   "tags": [
