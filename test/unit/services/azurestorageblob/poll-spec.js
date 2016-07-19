@@ -11,12 +11,12 @@ var logule = require('logule');
 var should = require('should');
 var sinon = require('sinon');
 var common = require('../../../../lib/common');
-var azurestorageblob = require('../../../../lib/services/azurestorageblob/');
-var storageBlobClient = require('../../../../lib/services/azurestorageblob/storageblobclient');
+var azureblobstorage = require('../../../../lib/services/azure-blobstorage/');
+var storageBlobClient = require('../../../../lib/services/azure-blobstorage/storageblobclient');
 
-var log = logule.init(module, 'StorageBlob-Mocha');
+var log = logule.init(module, 'BlobStorage-Mocha');
 
-describe('StorageBlob', function() {
+describe('BlobStorage', function() {
 
   describe('Polling', function() {
 
@@ -44,7 +44,7 @@ describe('StorageBlob', function() {
       });
 
       it('should return the state: succeeded', function(done) {
-        azurestorageblob.poll(log, validParams, function(
+        azureblobstorage.poll(log, validParams, function(
           err, reply, result) {
           should.not.exist(err);
 
@@ -92,7 +92,7 @@ describe('StorageBlob', function() {
       });
 
       it('should return the state: in progress', function(done) {
-        azurestorageblob.poll(log, validParams, function(
+        azureblobstorage.poll(log, validParams, function(
           err, reply, result) {
           should.not.exist(err);
 
@@ -140,7 +140,7 @@ describe('StorageBlob', function() {
       });
 
       it('should return the state: in progress', function(done) {
-        azurestorageblob.poll(log, validParams, function(
+        azureblobstorage.poll(log, validParams, function(
           err, reply, result) {
           should.not.exist(err);
 

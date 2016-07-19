@@ -11,8 +11,8 @@ var logule = require('logule');
 var should = require('should');
 var sinon = require('sinon');
 var common = require('../../../../lib/common');
-var azurestorageblob = require('../../../../lib/services/azurestorageblob/');
-var storageBlobClient = require('../../../../lib/services/azurestorageblob/storageblobclient');
+var azureblobstorage = require('../../../../lib/services/azure-blobstorage/');
+var storageBlobClient = require('../../../../lib/services/azure-blobstorage/storageblobclient');
 
 var log = logule.init(module, 'StorageBlob-Mocha');
 
@@ -42,7 +42,7 @@ describe('StorageBlob', function() {
       });
 
       it('should unbind the service', function(done) {
-        azurestorageblob.unbind(log, validParams, function(
+        azureblobstorage.unbind(log, validParams, function(
           err, reply, result) {
           should.not.exist(err);
 

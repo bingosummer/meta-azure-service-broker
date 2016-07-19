@@ -11,8 +11,8 @@ var logule = require('logule');
 var should = require('should');
 var sinon = require('sinon');
 var common = require('../../../../lib/common');
-var azurestorageblob = require('../../../../lib/services/azurestorageblob/');
-var storageBlobClient = require('../../../../lib/services/azurestorageblob/storageblobclient');
+var azureblobstorage = require('../../../../lib/services/azure-blobstorage/');
+var storageBlobClient = require('../../../../lib/services/azure-blobstorage/storageblobclient');
 
 var log = logule.init(module, 'StorageBlob-Mocha');
 
@@ -51,7 +51,7 @@ describe('StorageBlob', function() {
       });
 
       it('should create the storage blob', function(done) {
-        azurestorageblob.provision(log, validParams, function(
+        azureblobstorage.provision(log, validParams, function(
           err, reply, result) {
           should.not.exist(err);
           var replyExpected = {
@@ -114,7 +114,7 @@ describe('StorageBlob', function() {
         });
 
         it('should create the storage blob', function(done) {
-          azurestorageblob.provision(log, validParams, function(
+          azureblobstorage.provision(log, validParams, function(
             err, reply, result) {
             should.not.exist(err);
             var replyExpected = {
@@ -169,7 +169,7 @@ describe('StorageBlob', function() {
         });
 
         it('should create the storage blob', function(done) {
-          azurestorageblob.provision(log, validParams, function(
+          azureblobstorage.provision(log, validParams, function(
             err, reply, result) {
             should.exist(err);
             err.should.have.property('statusCode', 400);

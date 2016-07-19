@@ -11,8 +11,8 @@ var logule = require('logule');
 var should = require('should');
 var sinon = require('sinon');
 var common = require('../../../../lib/common');
-var azurestorageblob = require('../../../../lib/services/azurestorageblob/');
-var storageBlobClient = require('../../../../lib/services/azurestorageblob/storageblobclient');
+var azureblobstorage = require('../../../../lib/services/azure-blobstorage/');
+var storageBlobClient = require('../../../../lib/services/azure-blobstorage/storageblobclient');
 
 var log = logule.init(module, 'StorageBlob-Mocha');
 
@@ -43,7 +43,7 @@ describe('StorageBlob', function() {
       });
 
       it('should delete the storage blob', function(done) {
-        azurestorageblob.deprovision(log, validParams, function(
+        azureblobstorage.deprovision(log, validParams, function(
           err, reply, result) {
           should.not.exist(err);
 
