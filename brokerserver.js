@@ -10,9 +10,7 @@ var config = require('config');
 
 var broker = new Broker(config);
 
-broker.log.info(
-  'Validating and getting Azure credentials and subscript ID from environment variables...'
-);
+broker.log.info('Validating and getting Azure credentials and subscript ID from environment variables...');
 common.validateEnvironmentVariables();
 
 var addListeners = function(serviceId, serviceModule) {
@@ -23,9 +21,7 @@ var addListeners = function(serviceId, serviceModule) {
   broker.on('unbind-' + serviceId, serviceModule.unbind);
 };
 
-broker.log.info(
-  'Starting to collect the service offering and plans of each service module...'
-);
+broker.log.info('Starting to collect the service offering and plans of each service module...');
 
 var params = {};
 params.azure = common.getCredentialsAndSubscriptionId();
