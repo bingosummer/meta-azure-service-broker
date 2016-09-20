@@ -35,11 +35,10 @@ packages:
 # Since this stemcell is only used to run pre and post errands, we
 # strongly recommend you leave this alone so that your tile always
 # runs with the latest stemcell.
-#
-# stemcell_criteria:
-#   os: ubuntu-trusty
-#   requires_cpi: false
-#   version: '3062'
+stemcell_criteria:
+  os: ubuntu-trusty
+  requires_cpi: false
+  version: '3262'
 
 # Add properties you want to pass to your applications.
 # Properties specified here will not be configurable by the user.
@@ -98,7 +97,7 @@ forms:
     label: Database Password for Meta Azure Service Broker
   - name: azure_service_broker_database_name
     type: string
-    label: Database Username for Meta Azure Service Broker
+    label: Database Name for Meta Azure Service Broker
 - name: docdb-config-form
   label: Azure DocumentDb Service Configuration
   properties:
