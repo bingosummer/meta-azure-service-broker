@@ -25,9 +25,8 @@ After the DocumentDB account is created, you need to specify the following value
 
   ```
   service           plans       description
-  azure-documentdb   standard*   Azure DocumentDb Service
+  azure-documentdb  standard*   Azure DocumentDb Service
   ```
-  \* These service plans have an associated cost. Creating a service instance will incur this cost.
 
   If you can not find the service name, please use the following command to make the plans public.
 
