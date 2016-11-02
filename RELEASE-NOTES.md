@@ -11,5 +11,6 @@
     * [Azure Service Bus](https://azure.microsoft.com/en-us/services/service-bus/)
     * [Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/)
     * [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/)
+  * [Document to install and use Azure Service Broker](https://github.com/Azure/meta-azure-service-broker/blob/master/README.md)
 * Azure Service Broker Tile for PCF:
   * Supported PCF version: `v1.8.x`
