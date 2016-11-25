@@ -6,6 +6,13 @@ var supportedEnvironment = {
     serviceBusEndpointSuffix: '.servicebus.windows.net',
     storageEndpointSuffix: '.core.windows.net'
   },
+  AzureUSGovernment: {
+    location: 'usgovvirginia',
+    redisCacheEndpointSuffix: '.redis.cache.usgovcloudapi.net',
+    sqlServerEndpointSuffix: '.database.usgovcloudapi.net',
+    serviceBusEndpointSuffix: '.servicebus.usgovcloudapi.net',
+    storageEndpointSuffix: '.core.usgovcloudapi.net'
+  },
   AzureChinaCloud: {
     location: 'chinaeast',
     redisCacheEndpointSuffix: '.redis.cache.chinacloudapi.cn',
