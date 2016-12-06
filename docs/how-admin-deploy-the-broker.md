@@ -165,6 +165,13 @@
   cf push
   ```
 
+  If your environment doesn't have the network connection to the public Internet, you can run `npm install` or `npm install --production` and create a `node_modules` folder before deploying the broker. Then zip all the neccessary files into a zip file, and push it to Cloud Foundry.
+
+  ```
+  zip -r meta-azure-service-broker.zip brokerserver.js index.js lib LICENSE NOTICE package.json node_modules/
+  cf push meta-azure-service-broker -f manifest.yml -p meta-azure-service-broker.zip
+  ```
+
 ## Register a service broker
 
 ```
