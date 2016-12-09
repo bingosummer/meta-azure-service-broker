@@ -15,6 +15,7 @@ if (!_.has(supportedEnvironments, environment)) {
 
 var location = supportedEnvironments[environment]['location'];
 
+/*
 instanceId = uuid.v4();
 bindingId = uuid.v4();
 resourceGroupName = 'cloud-foundry-' + instanceId;
@@ -96,6 +97,7 @@ var azuredocumentdb = {
   }
 }
 testMatrix.push(azuredocumentdb);
+*/
 
 instanceId = uuid.v4();
 bindingId = uuid.v4();
@@ -157,6 +159,7 @@ var azuresqldb = {
 }
 testMatrix.push(azuresqldb);
 
+/*
 instanceId = uuid.v4();
 bindingId = uuid.v4();
 resourceGroupName = 'cloud-foundry-' + instanceId;
@@ -195,6 +198,7 @@ var azurerediscache = {
   }
 }
 testMatrix.push(azurerediscache);
+*/
 
 module.exports = testMatrix;
 
