@@ -1,6 +1,4 @@
-v1.2.0.rc2
-
-This is a release candidate.
+v1.2.0
 
 * Azure Service Broker
 
@@ -8,15 +6,17 @@ This is a release candidate.
 
   * Service broker module `azure-sqldb`
 
-    * Support creating databases in an existing server. New behavior:
+    * Support creating databases on an existing server. New behavior:
 
       * If the SQL server doesn't exist, the broker will create a new SQL server.
 
       * If the SQL server exists, the broker will use the existing SQL server.
 
-    * Remove the parameter `sqlServerCreateIfNotExist` because of the above change. For current users, you need to remove it from your parameters when provisioning a service instance. 
+    * The parameter `sqlServerCreateIfNotExist` is no longer needed because of the above change. For existing users, you need to remove it from your parameters when provisioning a service instance. 
 
-    * Support multiple firewall rules. For current users, you need to change the parameters from
+    * Support multiple firewall rules. For existing users, you need to specify additional parameters.
+
+      From
 
       ```
       "allowSqlServerFirewallRules": {
@@ -42,6 +42,5 @@ This is a release candidate.
           }
       ]
       ```
-
 
     * Remove the extra locations in the parameter file because the SQL database must be in the same location with the SQL server.
