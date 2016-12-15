@@ -3,11 +3,45 @@ v1.2.0.rc2
 This is a release candidate.
 
 * Azure Service Broker
-  * Fix a bug in the retry logic of connecting to the broker database. [#70](https://github.com/Azure/meta-azure-service-broker/issues/70)
+
+  * Fix a bug in the retry logic of connecting to the broker database. #70
+
   * Service broker module `azure-sqldb`
-    * Support creating databases in an existing server
-    * Support multiple firewall rules
-    * Remove the parameter `sqlServerCreateIfNotExist`. New behavior:
+
+    * Support creating databases in an existing server. New behavior:
+
       * If the SQL server doesn't exist, the broker will create a new SQL server.
+
       * If the SQL server exists, the broker will use the existing SQL server.
-    * Remove the extra locations in the parameter file because the SQL database must be in the same location with the SQL server
+
+    * Remove the parameter `sqlServerCreateIfNotExist` because of the above change. For current users, you need to remove it from your parameters when provisioning a service instance. 
+
+    * Support multiple firewall rules. For current users, you need to change the parameters from
+
+      ```
+      "allowSqlServerFirewallRules": {
+          "ruleName": "<rule-name-1>",
+          "startIpAddress": "xx.xx.xx.xx",
+          "endIpAddress": "xx.xx.xx.xx"
+      }
+      ```
+
+      to
+
+      ```
+      "allowSqlServerFirewallRules": [
+          {
+              "ruleName": "<rule-name-1>",
+              "startIpAddress": "xx.xx.xx.xx",
+              "endIpAddress": "xx.xx.xx.xx"
+          },
+          {
+              "ruleName": "<rule-name-2>",
+              "startIpAddress": "xx.xx.xx.xx",
+              "endIpAddress": "xx.xx.xx.xx"
+          }
+      ]
+      ```
+
+
+    * Remove the extra locations in the parameter file because the SQL database must be in the same location with the SQL server.
