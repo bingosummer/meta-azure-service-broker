@@ -4,7 +4,7 @@ This is a release candidate.
 
 * Azure Service Broker
   * Fix a bug that the broker fails to retry if the connection information to the broker database is not correct. [#70](https://github.com/Azure/meta-azure-service-broker/issues/70)
-  * azure-sqldb
+  * Service broker module `azure-sqldb`
     * Support creating databases in an existing server
     * Support multiple firewall rules
     * Remove the parameter `sqlServerCreateIfNotExist`. Current behavior:
