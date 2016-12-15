@@ -14,7 +14,7 @@ v1.2.0
 
     * The parameter `sqlServerCreateIfNotExist` is no longer needed because of the above change. For existing users, you need to remove it from your parameters when provisioning a service instance. 
 
-    * Support multiple firewall rules. For existing users, you need to specify additional parameters.
+    * Support multiple firewall rules. For existing users, you can specify additional parameters. For example:
 
       From
 
@@ -43,4 +43,4 @@ v1.2.0
       ]
       ```
 
-    * Remove the extra locations in the parameter file because the SQL database must be in the same location with the SQL server.
+    * Fit and Finish change: Remove the extra locations in the parameter file because the SQL database must be in the same location with the SQL server. If your existing parameter file already contains the extra location, it will be ignore.
