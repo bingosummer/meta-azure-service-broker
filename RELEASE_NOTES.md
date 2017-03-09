@@ -7,6 +7,6 @@
       - Append more options `Encrypt=true;TrustServerCertificate=false;HostNameInCertificate=*.database.windows.net;loginTimeout=30` to keep consistent with Azure Portal.
       - Add `jdbcUrlForAuditingEnabled`. It should be used when auditing is enabled.
     - Fix the issue of the allowed IP in the temporary firewall rule. [#84](https://github.com/Azure/meta-azure-service-broker/pull/84)
-- Azure Service Broker Tile
+- Azure Service Broker Tile. [#84](https://github.com/Azure/meta-azure-service-broker/pull/84)
   - Add a new config form for `AZURE_SQLDB_ALLOW_TO_CREATE_SQL_SERVER` and `AZURE_SQLDB_SQL_SERVER_POOL`.
   - Upgrade the stemcell version to `3312`.
