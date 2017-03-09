@@ -1,6 +1,6 @@
 - Azure Service Broker
   - Service broker module `azure-sqldb`
-    - Support creating databases in an existing sql server. [#76](https://github.com/Azure/meta-azure-service-broker/pull/76)
+    - The operator can forbid the broker from creating new SQL Server and specify the servers where developers are allowed to create databases. To do this, the operator needs to configure `AZURE_SQLDB_ALLOW_TO_CREATE_SQL_SERVER` and `AZURE_SQLDB_SQL_SERVER_POOL` in the broker manifest. [#76](https://github.com/Azure/meta-azure-service-broker/pull/76)
     - Provide the database-level users instead of the server-level users as the credentials. [#76](https://github.com/Azure/meta-azure-service-broker/pull/76) [#77](https://github.com/Azure/meta-azure-service-broker/pull/77)
     - Add Transparent Data Encryption support. [#81](https://github.com/Azure/meta-azure-service-broker/pull/81)
     - Refine `jdbcUrl` in the module `azure-sqldb`. [#84](https://github.com/Azure/meta-azure-service-broker/pull/84)
