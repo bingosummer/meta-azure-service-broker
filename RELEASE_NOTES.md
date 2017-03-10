@@ -1,12 +1,12 @@
 - Azure Service Broker
   - Service broker module `azure-sqldb`
-    - The operator can forbid the broker to create new SQL Server and specify the servers where developers are allowed to create databases. To do this, the operator needs to configure `AZURE_SQLDB_ALLOW_TO_CREATE_SQL_SERVER` and `AZURE_SQLDB_SQL_SERVER_POOL` in the broker configuration. [#76](https://github.com/Azure/meta-azure-service-broker/pull/76)
-    - Provide the database-level users instead of the server-level users as the credentials. [#76](https://github.com/Azure/meta-azure-service-broker/pull/76) [#77](https://github.com/Azure/meta-azure-service-broker/pull/77)
+    - The operator can disable the developer from creating a new SQL Server and specify the servers where developers are allowed to create databases. To do this, the operator needs to set `AZURE_SQLDB_ALLOW_TO_CREATE_SQL_SERVER` to `false` and specify `AZURE_SQLDB_SQL_SERVER_POOL` in the broker configuration. [#76](https://github.com/Azure/meta-azure-service-broker/pull/76)
+    - Provide the database-level users instead of the server-level users as the credentials. Note, you will no longer get the credentials of the admin user. [#76](https://github.com/Azure/meta-azure-service-broker/pull/76) [#77](https://github.com/Azure/meta-azure-service-broker/pull/77)
     - Add Transparent Data Encryption support. [#81](https://github.com/Azure/meta-azure-service-broker/pull/81)
-    - Refine `jdbcUrl` in the module `azure-sqldb`. [#84](https://github.com/Azure/meta-azure-service-broker/pull/84)
+    - Additional "JDBCURL" string property support. [#84](https://github.com/Azure/meta-azure-service-broker/pull/84)
       - Append more options `Encrypt=true;TrustServerCertificate=false;HostNameInCertificate=*.database.windows.net;loginTimeout=30` to keep consistent with Azure Portal.
       - Add `jdbcUrlForAuditingEnabled`. It should be used when auditing is enabled.
     - Fix the issue of the allowed IP in the temporary firewall rule. [#84](https://github.com/Azure/meta-azure-service-broker/pull/84)
 - Azure Service Broker Tile. [#84](https://github.com/Azure/meta-azure-service-broker/pull/84)
-  - Add a new config form for `AZURE_SQLDB_ALLOW_TO_CREATE_SQL_SERVER` and `AZURE_SQLDB_SQL_SERVER_POOL`.
+  - Add a new config form for `AZURE_SQLDB_ALLOW_TO_CREATE_SQL_SERVER` and `AZURE_SQLDB_SQL_SERVER_POOL`. This allows the operator to disable the developer from creating the SQL server.
   - Upgrade the stemcell version to `3312`.
